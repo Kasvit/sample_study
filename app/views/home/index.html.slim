@@ -1,0 +1,13 @@
+.main_body
+  h1 Chat
+  #chatbox.well
+    - @messages.each do |message|
+      = render 'messages/message', message: message
+  - if current_user
+    = form_with model: @message do |f|
+      .input-group.mb-3
+        = f.text_field :body, placeholder: 'Say something...', class: 'form-control'
+        .input-group-append
+          = f.submit "Send", class: 'btn btn-secondary'
+  - else
+    | You are need to be signed in

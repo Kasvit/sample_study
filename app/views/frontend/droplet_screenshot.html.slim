@@ -1,0 +1,64 @@
+.main_body
+  .profile_photo  
+    = image_tag "avatar.jpg"
+    .edit_photo
+      = image_tag "edit.png"
+  .profile
+    .profile_name
+      | Vitalii kasyanchuk
+    .default_text
+      | Default
+    .profile_text
+      | Update your project information under Settings
+  
+  .more_button
+    | &rarr; Move resources
+  .clearfix
+  ul.nav.own_navigation
+    li.own_nav_button.active
+      = link_to "Resources"
+    li.own_nav_button
+      = link_to "Activity"
+    li.own_nav_button
+      = link_to "Settings"
+  
+  .droplets_count
+    | Droplets (3)
+  table.table
+    tbody.tbody
+      tr
+        td.status
+        td.droplet
+          = image_tag "droplet.jpg"
+        td.user_name
+          | Vitalik
+        td.for_status_loading[colspan="2"]
+          .status_loading
+            span[style="width: 55%"]
+        td.more
+      tr
+        td.status
+          .status_dot
+        td.droplet
+          = image_tag "droplet.jpg"
+        td.user_name
+          | test
+        td.for_status_loading
+          | 182.168.122.11
+        td.add_droplet
+            = image_tag "add_droplet.jpg"
+        td.more
+          | ...
+      tr
+        td.status
+          .status_dot
+        td.droplet
+          = image_tag "droplet.jpg"
+        td.user_name
+          | auktor
+        td.for_status_loading
+          | 182.168.122.11
+        td.add_droplet
+            = image_tag "add_droplet.jpg"
+        td.more
+          | ...

@@ -1,0 +1,23 @@
+uk:
+  header:
+    title: "Т&П"
+    items: "Товари"
+    services: "Послуги"
+    categories: "Категорії"
+    frontend: "Верстка"
+    users: "Користувачі"
+
+
+  item:
+    search:
+      item: "Виберіть Товар"
+      category: "Виберіть категорію"
+    title: "Назва"
+    description: "Опис"
+    price: "Ціна"
+    category: "Категорія"
+    admin:
+      admin_panel: "Панель Адміністратора"
+      show: "Детальніше"
+      edit: "Редагувати"
+      delete: "Видалити"

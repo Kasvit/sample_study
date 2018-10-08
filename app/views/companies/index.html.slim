@@ -1,0 +1,28 @@
+.container
+  h1 Listing companies
+
+  table.table.table-bordered
+    thead
+      tr
+        th Logo
+        th Title
+        th Description
+        th Offices count
+        th colspan='3' Admin Panel
+
+    tbody
+      - @companies.each do |company|
+        tr
+          td 
+            - if company.logo.attached?
+              = image_tag company.logo.variant(resize: "30x30")
+          td = company.title
+          td = company.description
+          td = company.offices.count
+          td = link_to 'Show', company
+          td = link_to 'Edit', edit_company_path(company)
+          td = link_to 'Destroy', company, data: { confirm: 'Are you sure?' }, method: :delete
+
+  br
+
+  = link_to 'New Company', new_company_path

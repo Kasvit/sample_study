@@ -1,0 +1,52 @@
+.box_for_lines {
+  right: 50px;
+  left: 100px;
+  width: 90%;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+}
+
+.date {
+  float: left;
+  width: 30px;
+  font-weight: bold;
+}
+
+.line {
+  border-left: 1px solid black;
+  margin-top: 20px;
+  margin-left: 85px;
+  height: 500px;
+  z-index: -100;
+}
+
+.box_for_users {
+  position: relative;
+  margin-top: 50px;
+}
+
+.side_text {
+  background-color: #E3E1E3;
+  font-weight: bold;
+  font-size: 20px;
+  max-width: 180px;
+  height: 100%;  
+}
+
+.some_text {
+  border-bottom: 1px dotted red;
+}
+
+.main_box {
+  position: relative;
+}
+
+.small_box > span{
+  margin-right: auto;
+  height: 20px;
+  display: inline-block;
+  background-color: blue;
+  position: absolute;
+  left: 5px;
+}

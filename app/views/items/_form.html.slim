@@ -1,0 +1,11 @@
+.row
+  .col-md-6
+    .form.form-group
+      = simple_form_for @item do |f|
+        = f.input :title
+        = f.input :description
+        = f.input :price
+        = f.association :categories, collection: Category.all, as: :check_boxes, label_method: :name
+        .form--controls
+          = f.submit 'Save', class: 'btn btn-primary'
+          = link_to 'Cancel', :back, class: 'btn btn-default'

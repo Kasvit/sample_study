@@ -1,0 +1,19 @@
+.container
+  p Contacts
+  br
+  p Select CSV file to upload
+  = form_with(url: {action: :create}, multipart: true) do
+    = file_field_tag :file
+    = submit_tag("Upload")
+
+  br
+  .table_visible
+    p.uploading_status Uploaded
+    table.my_table
+      thead
+        tr
+          th ID
+          th First name
+          th Last name
+      tbody
+  .users_count       

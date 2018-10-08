@@ -1,0 +1,111 @@
+nav.navbar.own_navbar
+  .container
+    .navbar-header.nav_brand
+      a.navbar-brand.pull-left
+        = link_to image_tag("solutions_coe.png", class: "site-brand"), users_path
+    #navbar.collapse.navbar-collapse.pull-right
+      ul.own_nav.nav.navbar-nav
+        li
+          = link_to "HOME"
+        li
+          = link_to "SERVICES"
+        li.active
+          = link_to "TEAM"
+        li
+          = link_to "CASE STUDIES"
+        li
+          = link_to "PROTOTYPES"
+        li
+          = link_to "FAQ"
+        li.dashboard
+          = link_to "DASHBOARD"
+        li
+          = link_to "LOG OUT"
+.screenshot_body
+  .container
+    .row
+      .title Team
+      .stats
+        .col-md-2.block
+          .count 75
+          .text TEAM MEMBERS
+        .col-md-2.block
+          .count 72%
+          .text CURRENT TEAM LOAD
+        .col-md-2.block
+          .count 65
+          .text ASSIGNMENTS
+        .col-md-2.block
+          .count 130
+          .text OPPORTUNITIES
+      .col-md-3.pull-left
+        .radio_head BY LOAD:
+        .radio_boxes
+          label.radio_container
+            input[type="radio" checked="checked" name="radio"]
+            | Any 
+            span.radio_checkmark
+          label.radio_container
+            input[type="radio" name="radio"]
+            | 0% 
+            span.radio_checkmark
+          label.radio_container
+            input[type="radio" name="radio"]
+            | 1-50% 
+            span.radio_checkmark
+          label.radio_container
+            input[type="radio" name="radio"]
+            | 51-100% 
+            span.radio_checkmark
+          label.radio_container
+            input[type="radio" name="radio"]
+            | 100%+ 
+            span.radio_checkmark
+          label.radio_container
+            input[type="radio" name="radio"]
+            | On vacation 
+            span.radio_checkmark
+        .radio_head TEAM BY PRACTICE:
+        .radio_boxes
+          label.radio_container
+            input[type="radio" second="checked" name="radio"]
+            | Any 
+            span.radio_checkmark
+          label.radio_container
+            input[type="radio" name="radio"]
+            | BA/PdM 
+            span.radio_checkmark
+          label.radio_container
+            input[type="radio" name="radio"]
+            | Performance Testing
+            span.radio_checkmark
+          label.radio_container
+            input[type="radio" name="radio"]
+            | Software Engineer
+            span.radio_checkmark
+          label.radio_container
+            input[type="radio" name="radio"]
+            | Solution Architect
+            span.radio_checkmark
+        .radio_head TEAM:
+        .radio_boxes
+          label.radio_container
+            input[type="radio" third="checked" name="radio"]
+            | Any 
+            span.radio_checkmark
+          label.radio_container
+            input[type="radio" name="radio"]
+            | Architects(AD)
+            span.radio_checkmark
+      .col-md-3.pull-left
+      .row
+        .col-xs-12.col-sm-6.col-md-8
+          .row
+            - @users[0..7].each do |user|
+              = render 'user_box', user: user
+            - if @users.count > 8
+              button.see_more_users See all
+            .more_users
+              - @users[8..-1].each do |user|
+                = render 'user_box', user: user
+              button.see_latest_users See less

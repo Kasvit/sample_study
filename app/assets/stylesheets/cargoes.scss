@@ -1,0 +1,154 @@
+.main_div {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0px 0px 20px 0px;
+}
+
+.own_nav {
+  border: #F1F1F1;
+  border-bottom-style: solid; 
+  margin-bottom: 50px;
+  width: 700px;
+  font-size: 14px;
+  li {
+    margin-right: 25px;
+    a {
+      color: black;
+      font-weight: bold;
+      text-align: left;
+      padding: 8px;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav_count {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 12px;
+  background-color: black;
+  color: white;
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.active {
+  a {
+    color: red;
+    .nav_count {
+      background-color: red;
+    }
+  }
+  color: red;
+  border-bottom-style: solid;
+}
+
+.cargo_box {
+  padding-bottom: 30px;
+  box-shadow: 2px 2px 10px 1px lightgrey;
+  margin-bottom: 30px;
+}
+
+.flag_box {
+  margin-left: 30px;
+  margin-top: 30px;
+  float: left;
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.cargo_deatails {
+  padding-top: 30px;
+  margin: 0px 10px 5px 70px; 
+}
+
+.cargo_name {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.cargo_number {
+  font-size: 12px;
+  margin: 5px 0px 5px 0px;
+  color: grey;
+}
+
+.cargo_description {
+  font-size: 14px;
+}
+
+
+
+
+.side_div {
+  margin-left: 70px;
+}
+
+.side_title {
+  font-size: 24px;
+  margin: 10px 0px 30px 0px;
+}
+.customer_box {
+  width: 350px;
+  margin-bottom: 50px;
+  .customer_name, .customer_address, .customer_other_information  {
+    margin-top: 15px;
+  }
+  .customer_description {
+    margin-bottom: 3px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #ad9779;
+  }
+  .customer_detail {
+    font-size: 16px;
+    color: black;
+  }
+  .customer_state, .customer_sity, .customer_zip, .customer_phone {
+    display: inline-block;
+    width: 170px;
+    height: 50px;
+    margin: 2px;
+  }
+}
+
+.allowed_list {
+  color: grey;
+  font-size: 13px;
+  margin-bottom: 30px;
+  .allowed_list_link {
+    text-decoration: underline;
+  }
+}
+
+.registration_button_field {
+  .registration_text {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: black;
+    .registration_link {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+  }
+  .registration_button {
+    background-color: #E60003;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    height: 40px;
+    width: 300px;
+  }
+} 

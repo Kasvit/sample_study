@@ -1,0 +1,22 @@
+= simple_form_for(@company) do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+  .form-inputs
+    = f.input :title
+    = f.input :description, as: :text
+    - if @company.logo.attached?
+      | Currnent logo
+      = image_tag @company.logo.variant(resize: "30x30")
+  
+    = f.input :logo
+    h3 Offices
+    .offices
+      = f.simple_fields_for :offices do |office|
+        = render 'office_fields', f: office
+    
+    = link_to_add_association 'Add Office', f, :offices, class: 'btn btn-primary', data: { association_insertion_node: '.offices', association_insertion_method: :append }
+  br
+  .form-actions
+    = f.submit 'Save', class: 'btn btn-primary'
+    = link_to 'Cancel', :back, class: 'btn btn-default'

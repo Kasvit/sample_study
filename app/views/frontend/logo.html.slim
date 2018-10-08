@@ -1,0 +1,85 @@
+= stylesheet_link_tag "logo"
+- count = 10
+.frontend_page_3
+  .col-md-2.side_place
+    .own_logo
+      = link_to image_tag("logo_logo.png"), '#'
+    ul.side_top
+      li.active_li
+        = link_to '#' do
+          = fa_icon 'book', text: 'Reader (260)'
+      li 
+        = link_to '#' do
+          = fa_icon 'bell', text: 'Read later (22)'
+      li 
+        = link_to '#' do
+          = fa_icon 'star', text: 'Favorites (18)'
+      li 
+        = link_to '#' do
+          = fa_icon 'archive', text: 'Archive'
+      li.bottom_for_li
+        = link_to '#' do
+          = fa_icon 'trash', text: 'Trash'
+      li 
+        = link_to '#' do
+          = fa_icon 'list-ul', text: 'My feeds ↓'
+      li.bottom_for_li
+        = link_to '#' do
+          = fa_icon 'list-ul', text: "My lists ↓"
+      li 
+        = link_to '#' do
+          = fa_icon 'plus', text: "Add new List"
+      li 
+        = link_to '#' do
+          = fa_icon 'plus', text: "Add new Feed"
+      li.bottom_for_li
+        = link_to '#' do
+          = fa_icon 'upload', text: "Import OPML"
+      li.bottom_for_li
+        = link_to '#' do
+          = fa_icon 'question-circle', text: "Help"
+    ul.side_down
+      li Terms and Conditions
+      li Privacy
+  .col-md-10.body
+    #navbar.own_navbar
+      ul.nav.navbar-nav.navbar-right.nav_bar_menu
+        li
+          = link_to '#' do
+            = fa_icon 'user', text: 'Vitalii'
+            .user_status pro
+        li
+          = link_to '#' do
+            = fa_icon 'cog', text: 'Settings'
+        li
+          = link_to '#' do
+            = fa_icon 'sign-out', text: 'Log out'
+      form.navbar-form.navbar-left
+        input.form-control[type="text" placeholder="Search"]
+    .clearfix
+    .main_part
+      .buttons_part
+        button.check_new_main.pull-left
+          = fa_icon 'retweet', text: 'Check for new items'
+        button.mark_all_main.pull-right
+          = fa_icon 'check', text: 'Mark all as Read'
+      .text_part
+        - count.times do 
+          .message_box
+            .img_box
+              = image_tag "droplet.jpg"
+            .message_title  
+              | Lorem ipsumdi.a sed delor fllum in commodi.
+            ul.message_buttons
+              li
+                = link_to '#' do
+                  = fa_icon 'star'  
+              li
+                = link_to '#' do
+                  = fa_icon 'bell'
+              li
+                = link_to '#' do
+                  = fa_icon 'trash'
+            .message_time
+              | 35 minutes ago
+          .clearfix

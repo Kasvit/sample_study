@@ -1,0 +1,23 @@
+.status_button{
+  margin-top: 20px;
+}
+
+.status_loading {
+  background-color: lightgrey;
+  height: 30px;
+  border-radius: 30%;
+  width: 500px;
+  margin-top: 20px;
+  padding-top: 10px; 
+}
+ .status_bar {
+  display: block;
+  width: 0px;
+  height: 8px;
+  margin-left: 1px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: green;   
+}

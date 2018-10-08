@@ -1,0 +1,57 @@
+= stylesheet_link_tag "cargoes"
+- count = 3
+.container
+  .col-md-7.main_div.pull-left
+    .title Cargoes
+    #navbar.pull-left
+      ul.own_nav.nav.navbar-nav
+        li
+          = link_to '#' do
+            = "In work"
+            span.nav_count 2
+        li.active 
+          = link_to "#" do
+            = "Arrived"
+            span.nav_count 13
+    .clearfix
+    - count.times do 
+      .cargo_box
+        .flag_box
+          = image_tag "droplet.jpg"
+        .cargo_deatails
+          .cargo_name Name of the cargo
+          .cargo_number Some number of the ship #{count*15}
+          .cargo_description Text of the description about this cargo
+  .col-md-4.side_div.pull-left
+    .side_title Registration new shipment
+    .customer_box
+      .customer_name
+        .customer_description full name
+        .customer_detail Vitalii Kasianchuk
+      .customer_address 
+        .customer_description address name 1
+        .customer_detail Konovaltsia
+      .customer_other_information 
+        .customer_state
+          .customer_description state
+          .customer_detail Ivano-Frankivsk
+        .customer_sity
+          .customer_description city
+          .customer_detail  Ivano-Frankivsk
+        .customer_zip
+          .customer_description zip
+          .customer_detail 76014
+        .customer_phone
+          .customer_description phone
+          .customer_detail 06631690**
+    .allowed_list
+      | Before buy the item please check the 
+      span.allowed_list_link list 
+      | of allowed items
+    .registration_button_field
+      .registration_text
+        span.registration_link Register 
+        | here
+      button.registration_button I have got email from the shop
+
+

@@ -1,0 +1,12 @@
+.col-md-3.col-sm-3.item
+  article.post.type-post.user_box
+    .entry-thumbnail
+      - if user.avatar.attached?
+          = image_tag(user.avatar)
+    .entry-content
+      .user_name
+        = user.first_name
+        br
+        = user.last_name
+      .user_position
+        = user.position

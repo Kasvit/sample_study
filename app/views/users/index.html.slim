@@ -1,0 +1,26 @@
+/ https://global-uploads.webflow.com/5a5399a10a77cc0001b18774/5ad8f7903a40975ce19867ef_gantt_template_hero%402x.png
+
+- count = 0
+- line_count = 1
+- colors = ["blue", "green", "red", "yellow"]
+- line_counts = 9
+.box_for_lines
+  - line_counts.times do |line|
+    .date[style=""]
+      .line
+    |  12/09/1#{line_count}
+    - line_count += 1
+
+.box_for_users
+  .side_text.pull-left
+    - @users.each do |user|
+      .some_text
+        = link_to user_path(user) do
+          = user.full_name
+        end
+        
+  .main_box.pull-left
+    - @users_count.times do |e|
+      .small_box
+        span[style="width: #{rand(600)}px; top: #{5 + e + 27.5*count}px; background-color: #{colors.sample}"]
+        - count += 1

@@ -1,0 +1,11 @@
+.main_body {
+  margin: 25px;
+}
+#chatbox {
+  height: 300px;
+  border: solid 1px #222222; 
+  overflow-y: scroll;
+  .well {
+    padding: 0px;
+  }
+}

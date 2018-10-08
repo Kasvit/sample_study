@@ -1,0 +1,162 @@
+.main_body {
+  margin: 75px;
+}
+
+.profile_photo { 
+  position: relative;
+  width: 100px;
+  height: 100px;
+  float: left;
+  img {
+    border-radius: 10%;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.edit_photo { 
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.profile {
+  padding-left: 10px;
+  color: #67678E;
+  display: inline-block;
+  .profile_name { 
+    font-size: 25px;
+    display: inline-block;
+  } 
+
+  .default_text { 
+    font-size:10px;
+    font-weight: bold;
+    display: inline;
+    margin-left: 5px;
+    text-transform: uppercase;
+    background-color: #ECECEC;
+    padding: 4px 8px 4px 8px;
+    vertical-align: text-top;
+  }
+}
+
+  .profile_text {
+    font-size: 15px;
+  }
+
+.more_button {
+  float: right;
+  background-color: #ECECEC;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 25px 15px 25px;
+}
+
+ul.nav.own_navigation {
+  list-style-type: none;
+  border: #F1F1F1;
+  border-bottom-style: solid; 
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+li.own_nav_button {
+  float: left;
+  a {
+    text-decoration: none;
+    color: #999999;
+  }
+}
+
+.own_nav_button.active {
+  border: blue;
+  border-bottom-style: solid;
+  a {
+    color: black;
+  }
+}
+
+.droplets_count {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+table.table > tbody.tbody > tr > td {
+  vertical-align: middle !important;
+}
+
+table {
+
+  width: 1000px;
+  padding: 8px;
+  line-height: 1.42857143;
+
+  td.droplet { 
+    width: 40px;
+    img {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  td.status {
+    width: 40px;
+  }
+
+  .status_dot {
+    border-radius: 100%;
+    height: 12px;
+    width: 12px;
+    background-color: green;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+  }
+
+  td.user_name {
+    color: #2881FF;
+    width: 200px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .status_loading {
+    background-color: #ECECEC;
+    border-radius: 13px;
+  }
+  .status_loading > span {
+    display: block;
+    height: 8px;
+    // margin-top: 5px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #0069FF;   
+  }
+
+  td.add_droplet { 
+    width: 40px;
+    text-align: right;
+    img {
+      height: 15px;
+      width: 15px;
+    } 
+  }
+
+  td.more {
+    width: 40px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}

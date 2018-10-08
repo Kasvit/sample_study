@@ -1,0 +1,13 @@
+.nested-fields
+  table.offices_fields
+    tr
+      th.data_field Country
+      th.data_field Address
+      th.data_field Phone
+      th
+    tr
+      td.vertical_td = f.input :country, wrapper_html: { class: 'data_field' }, label: false
+      td.vertical_td = f.input :address, wrapper_html: { class: 'data_field' }, label: false
+      td.vertical_td = f.input :phone, wrapper_html: { class: 'data_field' }, label: false
+      td.vertical_td = link_to_remove_association  "remove Office", f, class: "btn btn-warning"
+  br

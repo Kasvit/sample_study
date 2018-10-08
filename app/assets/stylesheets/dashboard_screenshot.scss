@@ -1,0 +1,162 @@
+nav.navbar.own_navbar {
+  margin-bottom: 0px;
+}
+
+.nav_brand {
+  padding-top: 10px;
+}
+
+.own_nav a {
+  color: #70685F;
+  font-weight: bold;
+}
+
+.active {
+  border: #1DB4D3;
+  border-bottom-style: solid;
+  a {
+    color: #72BBD6;
+  }
+}
+
+.dashboard {
+  background-color: #1DB4D3;
+  a {
+    color: #FDFEFD;
+  }
+}
+
+.screenshot_body {
+  background-color: #F1F4F5;
+}
+.title {
+  color:#72BBD6;
+  font-size: 24px;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.stats {
+  margin-left: 15px;
+  margin-right: 50px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  .block {
+    width:250px; 
+    background-color: white;
+  }
+
+}
+
+.count {
+  font-size: 35px;
+  color:#72BBD6;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.radio_head {
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+.radio_boxes {
+  color: #B5B9C6;
+  .radio_container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .radio_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .radio_checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border:1px solid #A7A8A9;
+    border-radius: 50%;
+  }
+
+  .radio_container:hover input ~ .radio_checkmark {
+    background-color: #ccc;
+  }
+
+  .radio_container input:checked ~ .radio_checkmark {
+    background-color: #2196F3;
+  }
+  
+  .radio_checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .radio_container input:checked ~ .radio_checkmark:after {
+    display: block;
+  }
+
+  .radio_container .radio_checkmark:after {
+    left: 5px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+}
+
+.user_box {
+  width: 180px;
+  height: 250px;
+  text-align: center;
+  background-color: white;
+  margin: 0px 0px 45px 30px;
+
+  .entry-thumbnail > img {
+    margin-top: 10px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+
+  .user_name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .user_position {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #B5B9C6;
+  }
+}
+
+.see_latest_users, .see_more_users {
+  margin-left: 400px;
+  margin-bottom: 30px;
+}
+

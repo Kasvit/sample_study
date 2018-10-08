@@ -1,0 +1,16 @@
+.container
+  = link_to "Logo", logo_path
+  br
+  = link_to "Cargoes", cargoes_path
+  br
+  = link_to "Droplet", droplet_screenshot_path  
+  br
+  = link_to "Dashboard example", dashboard_screenshot_path
+  br
+  br
+  / .for_status_bar_example
+    p This is work with Status bar + Action cable/ job
+    .status_button 
+      = link_to 'Start', frontend_status_bar_path, remote: true
+    .status_loading
+      span.status_bar

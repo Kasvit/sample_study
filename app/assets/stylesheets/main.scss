@@ -1,0 +1,39 @@
+.page-actions {
+  margin-top: 21.44px;
+  margin-bottom: 21.44px;
+}
+
+.table.table-bordered {
+  thead {
+    tr {
+      th {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.language {
+  padding: 0px 0px 0px 10px;
+}
+body {
+  font-family: 'Noto Sans', sans-serif !important;
+  // background: url('background_main_image.jpg') no-repeat center center;
+  // background-size: cover;
+}
+
+.dropdown-menu {
+  .dropdown-item {
+    text-align: center;
+  }
+}
+
+.user_info {
+  img {
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+  span {
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,17 @@
+.container
+  p
+    = link_to "Edit", edit_item_path(@item)
+  p
+    = link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}
+  p 
+    = @item.title
+  p 
+    = @item.description
+  p 
+    = @item.price
+  p 
+    |Categories: 
+    = @item.categories.collect { |a| a.name }
+    
+  p 
+    = link_to "Items", items_path

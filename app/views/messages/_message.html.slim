@@ -1,0 +1,7 @@
+.well.own_message_style
+  |  [
+  = message.created_at.strftime("%I:%M %p")
+  | ] 
+  = message.user.full_name
+  | : 
+  = message.body

@@ -1,0 +1,37 @@
+.container
+
+  p#notice = notice
+  
+  .link_buttons
+    = link_to 'Edit', edit_company_path(@company)
+    '|
+    = link_to 'Delete', company_path(@company), method: :delete, data: { confirm: "Are you sure?" }
+    '|
+    = link_to 'Back', companies_path
+  .clearfix
+  
+  - if @company.logo.attached?
+    .office_logo 
+      = image_tag @company.logo.variant(resize: "250x250")
+  
+  .office_box
+    p
+      .office_title
+        | Title: 
+      = @company.title
+    p
+      .office_description
+        | Description of the company: 
+      = @company.description
+
+  .clearfix
+  p.offices_list 
+    |Offices: 
+    - @company.offices.each do |office|
+      .col-sm
+        = office.country
+        br
+        = office.address
+        br
+        = office.phone
+      br

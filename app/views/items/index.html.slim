@@ -1,0 +1,33 @@
+.section-padding
+  .container
+    .row
+      .col-md-12
+        h1.page-title.pull-left Items
+        .pull-right.page-actions
+          = link_to 'Add Item', new_item_path, class: 'btn btn-primary'
+        .clearfix
+    = form_tag(items_path, method: :get, id: "filter") do
+      = text_field_tag :title, params[:title], placeholder: t("item.search.item")
+      /= select_tag :category_id, options_from_collection_for_select(Category.all, "id", "name", params[:category_id]), include_blank: "Select category"
+      = select_tag :category_id, options_for_select(Category.all.map {|category| [category.name, category.id]}, params[:category_id]),
+        include_blank: t("item.search.category")
+      = submit_tag 'Search', name: nil
+
+    table.table.table-bordered
+      thead 
+        tr 
+          th= t("item.title")
+          th= t("item.description")
+          th= t("item.price")
+          th= t("item.category")
+          th colspan='3' = t("item.admin.admin_panel")
+      tbody
+        - @items.each do |item|
+          tr
+            td= item.title
+            td= item.description
+            td= item.price
+            td= item.categories.pluck(:name).join(", ")
+            td= link_to t("item.admin.show"), item_path(item)
+            td= link_to t("item.admin.edit"), edit_item_path(item)
+            td= link_to t("item.admin.delete"), item_path(item), method: :delete, data: {confirm: "Are you sure?"}

@@ -1,0 +1,22 @@
+en:
+  header:
+    title: "I&S"
+    items: "Items"
+    services: "Services"
+    categories: "Categories"
+    frontend: "Frontend"
+    users: "Users"
+
+  item:
+    search:
+      item: "Find Item"
+      category: "Find Category"
+    title: "Title"
+    description: "Description"
+    price: "Price"
+    category: "Category"
+    admin:
+      admin_panel: "Admin Panel"
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
