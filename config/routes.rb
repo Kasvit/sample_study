@@ -22,6 +22,8 @@ Rails.application.routes.draw do
     get 'frontend/status_bar'
 
     get '/own_cookie', controller: 'tasks', action: 'own_cookie', as: :own_cookie
+    get '/caching_example', to 'tasks#caching_example'
+
     root 'home#index' 
     post "messages", to: "messages#create"
   end

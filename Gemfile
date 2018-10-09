@@ -31,7 +31,7 @@ gem 'remotipart', '~> 1.2'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'dynamic_form'
-
+gem 'dalli'
 
 
 
