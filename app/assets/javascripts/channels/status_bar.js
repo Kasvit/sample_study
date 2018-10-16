@@ -3,7 +3,7 @@ jQuery(document).on('turbolinks:load', function() {
   App.status_bar = App.cable.subscriptions.create("StatusBarChannel", {
 
     connected: function() {
-      console.log("Connected to a status bar channel");
+      // console.log("Connected to a status bar channel");
     },
 
     disconnected: function() {

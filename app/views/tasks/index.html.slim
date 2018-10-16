@@ -1,2 +1,9 @@
 .container
-  = link_to "Own cookie", own_cookie_path
+  div
+    p This is example of the work with cookies
+    = link_to "Own cookie", own_cookie_path
+  br
+  br
+  div
+    p This is example of the work with caching data (fragment caching, expires in 10 seconds)
+    = link_to "Caching", caching_example_path

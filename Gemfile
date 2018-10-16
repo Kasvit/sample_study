@@ -31,8 +31,11 @@ gem 'remotipart', '~> 1.2'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'dynamic_form'
+gem "actionpack-page_caching"
 gem 'dalli'
-
+gem 'memcached'
+gem "redis"
+gem 'redis-rails'
 
 
 gem 'coffee-rails', '~> 4.2'
