@@ -1,3 +1,18 @@
+.own_title {
+  display: flex;
+  justify-content: center;
+}
+
+.own_container {
+  flex-basis: 50px;
+  height: 50px;
+  display: flex;
+  // flex-direction: row;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .status_button{
   margin-top: 20px;
 }

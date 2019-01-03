@@ -7,6 +7,10 @@ class User < ApplicationRecord
   has_one_attached :avatar, dependent: :destroy
   has_many :messages
 
+  # after_save    :expire_user_all_cache
+  # after_destroy :expire_user_all_cache
+  after_commit  :flush_cache
+
   # validate :low_rating_ignore
   # validate :check_first_name
   validates :avatar, content_type: ['image/png', 'image/jpg', 'image/jpeg'] 
@@ -21,12 +25,10 @@ class User < ApplicationRecord
       if auth.provider == 'facebook'
         attach_facebook_fields(user, auth)
       end
-
       if auth.provider == 'google_oauth2'
         user.first_name    = auth.info.first_name 
         user.last_name     = auth.info.last_name
       end
-
       user.email         = auth.info.email
       # binding.pry
       # user.token         = auth.credentials.token
@@ -43,12 +45,22 @@ class User < ApplicationRecord
       result.avatar.attach(io: downloaded_image, filename: 'avatar.jpg', content_type: downloaded_image.content_type)
       result.save
     end
-    
     result
   end
 
+  # def self.all_cached
+  #   Rails.cache.fetch('User.all') { all.to_a }
+  #   # Rails.cache.fetch('User.all', expires_in: 5.seconds) { all.to_a }
+  # end
 
   private
+
+  # def expire_user_all_cache
+  #   Rails.cache.delete('User.all')
+  # end
+  def flush_cache
+    Rails.cache.delete([self.class.name, id])
+  end
 
   def self.attach_facebook_fields(user, auth)
     user.first_name    = auth.info.first_name

@@ -6,6 +6,7 @@ en:
     categories: "Categories"
     frontend: "Frontend"
     users: "Users"
+    contacts: "Contacts"
 
   item:
     search:

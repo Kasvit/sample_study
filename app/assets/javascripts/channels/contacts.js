@@ -4,7 +4,7 @@ jQuery(document).on('turbolinks:load', function() {
   App.contacts = App.cable.subscriptions.create("ContactsChannel", {
 
     connected: function() {
-      console.log("Connected to contacts channel");
+      // console.log("Connected to contacts channel");
     },
 
     disconnected: function() {
