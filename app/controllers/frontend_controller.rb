@@ -24,6 +24,10 @@ class FrontendController < ApplicationController
     
   end
 
+  def jquery_tasks
+    
+  end
+
   def status_bar
     ProgressBarJob.perform_later
     head :ok

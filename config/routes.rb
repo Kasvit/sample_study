@@ -17,6 +17,7 @@ Rails.application.routes.draw do
  
     get '/logo',  controller: 'frontend', action: 'logo',  as: :logo
     get '/cargoes',  controller: 'frontend', action: 'cargoes',  as: :cargoes
+    get '/jquery_tasks',  controller: 'frontend', action: 'jquery_tasks',  as: :jquery_tasks
     get '/dashboard_screenshot',  controller: 'frontend', action: 'dashboard_screenshot',  as: :dashboard_screenshot
     get '/droplet_screenshot',  controller: 'frontend', action: 'droplet_screenshot',  as: :droplet_screenshot
     get 'frontend/status_bar'

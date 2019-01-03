@@ -10,9 +10,9 @@
     = link_to 'Back', companies_path
   .clearfix
   
-  - if @company.logo.attached?
-    .office_logo 
-      = image_tag @company.logo.variant(resize: "250x250")
+  / - if @company.logo.attached?
+  /   .office_logo 
+  /     = image_tag @company.logo.variant(resize: "250x250")
   
   .office_box
     p

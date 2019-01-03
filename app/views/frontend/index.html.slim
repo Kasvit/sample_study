@@ -1,11 +1,17 @@
 .container
-  = link_to "Logo", logo_path
-  br
-  = link_to "Cargoes", cargoes_path
-  br
-  = link_to "Droplet", droplet_screenshot_path  
-  br
-  = link_to "Dashboard example", dashboard_screenshot_path
+  .own_title
+    |Maked with flexbox
+  .own_container
+    .own_element
+      = link_to "Logo", logo_path
+    .own_element
+      = link_to "Cargoes", cargoes_path
+    .own_element
+      = link_to "Droplet", droplet_screenshot_path  
+    .own_element
+      = link_to "Dashboard example", dashboard_screenshot_path
+    .own_element
+      = link_to "Jquery example", jquery_tasks_path
   br
   br
   / .for_status_bar_example
